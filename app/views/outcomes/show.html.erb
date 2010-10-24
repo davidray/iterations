@@ -1,0 +1,20 @@
+<% title "Outcome" %>
+
+<p>
+  <strong>Value:</strong>
+  <%=h @outcome.value %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%=h @outcome.description %>
+</p>
+<p>
+  <strong>Points:</strong>
+  <%=h @outcome.points %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_outcome_path(@outcome) %> |
+  <%= link_to "Destroy", @outcome, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", outcomes_path %>
+</p>

@@ -1,0 +1,21 @@
+<% title "Outcomes" %>
+
+<table>
+  <tr>
+    <th>Value</th>
+    <th>Description</th>
+    <th>Points</th>
+  </tr>
+  <% for outcome in @outcomes %>
+    <tr>
+      <td><%=h outcome.value %></td>
+      <td><%=h outcome.description %></td>
+      <td><%=h outcome.points %></td>
+      <td><%= link_to "Show", outcome %></td>
+      <td><%= link_to "Edit", edit_outcome_path(outcome) %></td>
+      <td><%= link_to "Destroy", outcome, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Outcome", new_outcome_path %></p>

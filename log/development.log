@@ -1,0 +1,61 @@
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.4ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateOutcomes (20101024135851)
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCREATE TABLE "outcomes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value" varchar(255), "description" varchar(255), "points" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101024135851')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("outcomes")[0m
+
+
+Processing OutcomesController#index (for 127.0.0.1 at 2010-10-24 10:00:40) [GET]
+  [4;36;1mOutcome Load (0.5ms)[0m   [0;1mSELECT * FROM "outcomes" [0m
+Rendering template within layouts/application
+Rendering outcomes/index
+Completed in 49ms (View: 42, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing OutcomesController#new (for 127.0.0.1 at 2010-10-24 10:00:45) [GET]
+Rendering template within layouts/application
+Rendering outcomes/new
+Rendered outcomes/_form (8.2ms)
+Completed in 28ms (View: 22, DB: 0) | 200 OK [http://localhost/outcomes/new]
+
+
+Processing OutcomesController#create (for 127.0.0.1 at 2010-10-24 10:01:50) [POST]
+  Parameters: {"outcome"=>{"points"=>"0", "value"=>"Bad", "description"=>"You wake up with a bad head cold. You try to work, but just stare aimlessly at the monitor all day. You go home at lunch and try to sleep it off."}, "commit"=>"Save changes", "authenticity_token"=>"VxIQWcSMwAmZbglAn5SjRBpWjhSwOjJQWSVrxazCFMw="}
+  [4;35;1mOutcome Create (0.5ms)[0m   [0mINSERT INTO "outcomes" ("created_at", "updated_at", "points", "value", "description") VALUES('2010-10-24 14:01:50', '2010-10-24 14:01:50', 0, 'Bad', 'You wake up with a bad head cold. You try to work, but just stare aimlessly at the monitor all day. You go home at lunch and try to sleep it off.')[0m
+Redirected to http://localhost:3000/outcomes/1
+Completed in 15ms (DB: 1) | 302 Found [http://localhost/outcomes]
+
+
+Processing OutcomesController#show (for 127.0.0.1 at 2010-10-24 10:01:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mOutcome Load (0.2ms)[0m   [0;1mSELECT * FROM "outcomes" WHERE ("outcomes"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering outcomes/show
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/outcomes/1]
+
+
+Processing OutcomesController#index (for 127.0.0.1 at 2010-10-24 10:01:52) [GET]
+  [4;35;1mOutcome Load (0.5ms)[0m   [0mSELECT * FROM "outcomes" [0m
+Rendering template within layouts/application
+Rendering outcomes/index
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://localhost/outcomes]

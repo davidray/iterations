@@ -1,0 +1,9 @@
+one:
+  value: MyString
+  description: MyString
+  points: 1
+
+two:
+  value: MyString
+  description: MyString
+  points: 1
