@@ -1,0 +1,1 @@
+2010/10/24 10:19:32 [error] 758#0: *724 "/Users/david/projects/Agile-Training/iterations/public/index.html" is not found (2: No such file or directory), client: 127.0.0.1, server: _, request: "GET / HTTP/1.1", host: "localhost:3000"
