@@ -1,3 +1,29 @@
+table.board {
+	border-width: 1px;
+	border-spacing: ;
+	border-style: none;
+	border-color: gray;
+	border-collapse: separate;
+	background-color: white;
+}
+table.board th {
+	border-width: 0 2px 2px 0;
+	padding: 1px;
+	border-style: solid;
+	border-color: gray;
+	background-color: white;
+  width: 160px;
+}
+table.board td {
+	border-width: 0 2px 0 0;
+	padding: 1px;
+	border-style: solid;
+	border-color: gray;
+	background-color: white;
+	width: 160px;
+	height: 160px;
+}
+
 body {
   background-color: #4B7399;
   font-family: Verdana, Helvetica, Arial;

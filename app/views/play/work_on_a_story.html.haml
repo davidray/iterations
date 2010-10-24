@@ -1,0 +1,9 @@
+.outcome
+  = @outcome.description
+  = @outcome.points
+
+.links
+  = link_to "Work on a story", work_on_a_story_play_path
+  = link_to "Test a story", work_on_a_story_play_path(:lane => 'test')
+  = link_to "Rules", play_index_path
+

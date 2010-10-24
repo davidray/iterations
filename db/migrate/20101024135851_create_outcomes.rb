@@ -4,6 +4,7 @@ class CreateOutcomes < ActiveRecord::Migration
       t.string :value
       t.string :description
       t.integer :points
+      t.string :lane
       t.timestamps
     end
   end

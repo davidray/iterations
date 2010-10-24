@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(:version => 20101024135851) do
     t.string   "value"
     t.string   "description"
     t.integer  "points"
+    t.string   "lane"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
