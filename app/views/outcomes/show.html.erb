@@ -14,6 +14,11 @@
 </p>
 
 <p>
+  <strong>Lane:</strong>
+  <%=h @outcome.lane %>
+</p>
+
+<p>
   <%= link_to "Edit", edit_outcome_path(@outcome) %> |
   <%= link_to "Destroy", @outcome, :confirm => 'Are you sure?', :method => :delete %> |
   <%= link_to "View All", outcomes_path %>

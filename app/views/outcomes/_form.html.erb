@@ -2,7 +2,7 @@
   <%= f.error_messages %>
   <p>
     <%= f.label :value %><br />
-    <%= f.text_field :value %>
+    <%= f.select :value, ["good", "bad"] %>
   </p>
   <p>
     <%= f.label :description %><br />
@@ -11,6 +11,10 @@
   <p>
     <%= f.label :points %><br />
     <%= f.text_field :points %>
+  </p>
+  <p>
+    <%= f.label :lane %><br />
+    <%= f.select :lane, ["dev", "test"] %>
   </p>
   <p><%= f.submit %></p>
 <% end %>

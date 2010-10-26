@@ -1,13 +1,11 @@
 class Outcome < ActiveRecord::Base
-  attr_accessible :value, :description, :points
+  attr_accessible :value, :description, :points, :lane
   
-  named_scope :tests, :conditions => {:lane => 'test'}
+  named_scope :test, :conditions => {:lane => 'test'}
   named_scope :dev, :conditions => {:lane => 'dev'}
      
-  def self.random
-    self.tests
-    ids = connection.select_all("SELECT id FROM outcomes")
-    return find(ids[rand(ids.length)]["id"].to_i) unless ids.blank?
+  def self.random(outcomes)
+    return outcomes[rand(outcomes.length)] unless outcomes.blank?
   end
   
 

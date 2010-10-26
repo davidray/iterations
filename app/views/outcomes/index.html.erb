@@ -5,12 +5,14 @@
     <th>Value</th>
     <th>Description</th>
     <th>Points</th>
+    <th>Lane</th>
   </tr>
   <% for outcome in @outcomes %>
     <tr>
       <td><%=h outcome.value %></td>
       <td><%=h outcome.description %></td>
       <td><%=h outcome.points %></td>
+      <td><%=h outcome.lane %></td>
       <td><%= link_to "Show", outcome %></td>
       <td><%= link_to "Edit", edit_outcome_path(outcome) %></td>
       <td><%= link_to "Destroy", outcome, :confirm => 'Are you sure?', :method => :delete %></td>

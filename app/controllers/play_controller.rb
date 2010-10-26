@@ -4,10 +4,10 @@ class PlayController < ApplicationController
   end
   
   def work_on_a_story
-    if param[:lane] and param[:lane] == 'test'
-      @outcome = Outcome.random :test
+    if params[:lane] and params[:lane] == 'test'
+      @outcome = Outcome.random(Outcome.test)
     else
-      @outcome = Outcome.random :dev
+      @outcome = Outcome.random(Outcome.dev)
     end
   end
 
