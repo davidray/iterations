@@ -2,7 +2,7 @@ class CreateOutcomes < ActiveRecord::Migration
   def self.up
     create_table :outcomes do |t|
       t.string :value
-      t.string :description
+      t.text :description
       t.integer :points
       t.string :lane
       t.timestamps
