@@ -1,8 +1,9 @@
-<h1> How was your day? </h1>
+<h1> Here's how your day went... </h1>
 <%= @outcome.description %>
 
+<% if @outcome.lane == 'dev'%>
 <h1><%= @outcome.points %> Work Credits </h1>
-
+<% end %>
 <br/>
 <%= link_to "Work on a story", work_on_a_story_play_path %>
 <%= link_to "Test a story", work_on_a_story_play_path(:lane => 'test') %>
