@@ -12,8 +12,6 @@ GEM
     activeresource (2.3.5)
       activesupport (= 2.3.5)
     activesupport (2.3.5)
-    bluecloth (2.0.7)
-    haml (3.0.18)
     rack (1.0.1)
     rails (2.3.5)
       actionmailer (= 2.3.5)
@@ -29,7 +27,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bluecloth
-  haml
   rails (= 2.3.5)
   sqlite3-ruby

@@ -5,8 +5,8 @@
 <h1><%= @outcome.points %> Work Credits </h1>
 <% end %>
 <br/>
-<%= link_to "Work on a story", work_on_a_story_play_path %>
-<%= link_to "Test a story", work_on_a_story_play_path(:lane => 'test') %>
+<%= link_to "Work on a story", work_on_a_story_play_path(:outcome_index => @outcome_index, :test_index => @test_index) %>
+<%= link_to "Test a story", work_on_a_story_play_path(:lane => 'test', :test_index => @test_index, :outcome_index => @outcome_index) %>
 <%= link_to "Rules", play_index_path %>
   
   
